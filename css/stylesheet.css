@@ -4,11 +4,114 @@
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
 
-body{
-    font-family: 'Spoqa Han Sans', 'Sans-serif'; /*'Spoqa Han Sans폰트 오류 시 'Sans-serif' 글꼴군으로 대체*/
+/*body 안에 있는 모든 요소 박스사이징 초기화*/
+body *, body *::before, body *::after{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    /*html에 폰트 사이즈를 지정하고 자손에서 rem/em을 사용하면 html 폰트 사이즈만 조정하면 되기 때문에 수정이 용의함*/
+}
+
+body {
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    /*'Spoqa Han Sans폰트 오류 시 'Sans-serif' 글꼴군으로 대체*/
+    font-size: 1.5rem;
+    color: #181818;
+    background: #fff;
+
+    /*
+    flex를 활용한 콘텐츠 가운데 정렬
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    */
 }
 
 /*skip nav*/
-.skip-nav{
+.skip-nav {
     display: none;
+}
+
+/*Layout*/
+/*구형 콘텐츠 가운데 정렬*/
+.header, .visual, .main, .slogan{
+    width: 940px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.skip-nav {
+
+}
+
+.header {
+    background: yellow;
+}
+
+.visual {
+    background: lime;
+    height: 120px; /*원래 규격을 fix하는 것은 좋지 않지만 변경 계획이 없다면 괜찮음*/
+}
+
+.main {
+    background: skyblue;
+    /*
+    신형으로 group 정렬 
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 30px;
+    justify-content: space-between;
+    */
+    padding: 30px 15px;
+
+    /*clearfix와 비슷한 효과,
+    하지만 clearfix가 더 좋다.*/
+    overflow: hidden;
+    min-height: 450px;
+}
+
+/* 정렬을 위한 main의 class
+.clearfix::after{
+    content:"";
+    display:block;
+    clear: both;
+} */
+
+.group{
+    float: left;
+    margin: 0 15px;
+}
+
+.group1{
+    background: blueviolet;
+    width: 250px;
+
+}
+
+.group2{
+    background: tomato;
+    width: 380px;
+}
+
+.group3{
+    background: greenyellow;
+    width: 180px;
+}
+
+/* float 정렬을 위한 클래스
+.clearfix{
+    clear: both;
+}
+*/
+
+.slogan {
+    background: orange;
+}
+
+.footer {
+    background: pink;
+    width: 100%;
 }
