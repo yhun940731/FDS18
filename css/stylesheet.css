@@ -5,7 +5,9 @@
 @import url(./fontello.css);
 
 /*body 안에 있는 모든 요소 박스사이징 초기화*/
-body *, body *::before, body *::after{
+body *,
+body *::before,
+body *::after {
     box-sizing: border-box;
 }
 
@@ -29,6 +31,12 @@ body {
     justify-content: center;
     */
 }
+/*링크 스타일*/
+a{
+    color: inherit;
+    text-decoration: none; /*a태그 밑줄 없애기*/
+}
+
 
 /*skip nav*/
 .skip-nav {
@@ -37,23 +45,56 @@ body {
 
 /*Layout*/
 /*구형 콘텐츠 가운데 정렬*/
-.header, .visual, .main, .slogan{
+.header,
+.visual,
+.main,
+.slogan {
     width: 940px;
     padding: 10px;
     margin: 0 auto;
 }
 
-.skip-nav {
+.skip-nav {}
 
-}
-
+/*header*/
 .header {
     background: yellow;
+    position: relative;
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px;
 }
 
+/*Logo*/
+.logo{
+    position: absolute;
+    top: 50px;
+    left: 65px;
+    margin: 0;
+}
+
+/*회원 안내 링크 목록*/
+.member{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.member li{
+    display: inline-block;
+    padding: 4px 0; /*여기에 여백을 줘야 접근성(tab키로 접근했을때 포커스 테두리가 잘리지않고 잡힘*/
+}
+
+.memeber a{
+    padding: 6px 0; /*a한테 여백을 줘야 클릭 면적이 넓어짐.*/
+    display: inline-block;
+}
+
+/*visual*/
 .visual {
     background: lime;
-    height: 120px; /*원래 규격을 fix하는 것은 좋지 않지만 변경 계획이 없다면 괜찮음*/
+    height: 120px;
+    /*원래 규격을 fix하는 것은 좋지 않지만 변경 계획이 없다면 괜찮음*/
 }
 
 .main {
@@ -80,23 +121,23 @@ body {
     clear: both;
 } */
 
-.group{
+.group {
     float: left;
     margin: 0 15px;
 }
 
-.group1{
+.group1 {
     background: blueviolet;
     width: 250px;
 
 }
 
-.group2{
+.group2 {
     background: tomato;
     width: 380px;
 }
 
-.group3{
+.group3 {
     background: greenyellow;
     width: 180px;
 }
