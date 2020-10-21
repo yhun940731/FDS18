@@ -4,6 +4,16 @@
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
 
+/* 숨김 제목 및 숨김 콘텐츠 */
+.a11y-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin:0;
+    overflow:hidden;
+    clip-path: polygon(0 0, 0 0, 0 0) /*x, y, z*/
+}
+
 /*body 안에 있는 모든 요소 박스사이징 초기화*/
 body *,
 body *::before,
@@ -19,9 +29,9 @@ html {
 body {
     font-family: 'Spoqa Han Sans', 'Sans-serif';
     /*'Spoqa Han Sans폰트 오류 시 'Sans-serif' 글꼴군으로 대체*/
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #181818;
-    background: #fff;
+    background: #ccc;
 
     /*
     flex를 활용한 콘텐츠 가운데 정렬
@@ -50,7 +60,6 @@ a{
 .main,
 .slogan {
     width: 940px;
-    padding: 10px;
     margin: 0 auto;
 }
 
@@ -58,8 +67,8 @@ a{
 
 /*header*/
 .header {
-    background: yellow;
     position: relative;
+    background: #fff;
     border-radius: 0 0 15px 15px;
     padding: 0 30px;
 }
@@ -82,13 +91,110 @@ a{
 
 .member li{
     display: inline-block;
-    padding: 4px 0; /*여기에 여백을 줘야 접근성(tab키로 접근했을때 포커스 테두리가 잘리지않고 잡힘*/
+    padding: 2px 0; /*여기에 여백을 줘야 접근성(tab키로 접근했을때 포커스 테두리가 잘리지않고 잡힘*/
 }
 
 .memeber a{
     padding: 6px 0; /*a한테 여백을 줘야 클릭 면적이 넓어짐.*/
     display: inline-block;
 }
+
+/* navigation */
+
+.navigation{
+    padding-bottom: 35px;
+}
+
+.menu{
+    background: linear-gradient(
+        to bottom,
+        #efa22f 0%,
+        #ed702d 35%, 
+        #ed702d 70%,
+        #efa22f 100%
+    );
+    border-top: 2px solid currentColor; /*currentColor: 현재 글자 칼라*/
+    margin: 10px 0 0 0; /*콘텐츠 간의 간격을 위한*/
+    padding-left: 0; /*여백 없애기*/
+    list-style: none; /*리스트 앞 도형 없애기*/
+    height: 47px;
+    border-radius: 0 0 5px 5px;
+    padding-left: 225px;
+}
+
+.menu-item{
+    position: relative;
+    float: left;
+}
+
+.menu-button{
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 700;
+    background: transparent;
+    line-height: 45px;
+    display: block;
+    padding: 0 20px;
+    border: 0;
+    border-left: 2px solid rgba(255,255,255, .5);
+    text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000; /*윤곽체 처럼 보이게 하기*/
+}
+
+.menu-act .menu-button{
+    color: #ff0;
+}
+
+.menu-act .menu-button::after{
+    content: "";
+    display: block;
+    border-top: 2px solid #000;
+}
+
+.sub-menu{
+    margin: 0; /*콘텐츠 간의 간격을 위한*/
+    padding-left: 0; /*여백 없애기*/
+    list-style: none; /*리스트 앞 도형 없애기*/
+    position: absolute;
+    top:47px;
+    white-space: nowrap;
+}
+
+.sub-menu li,
+.sub-menu a {
+    display: inline-block;
+}
+
+.sub-menu a{
+    padding: 8px 0;
+    margin-right: 10px;
+}
+
+.sub-menu a::before{ /*서브 메뉴에 아이콘 추가*/
+    content: "\f192";
+    font-family: 'fontello';
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+}
+
+.sub-menu a:hover::before,
+.sub-menu a:focus::before{ /*서브 메뉴에 아이콘 추가*/
+    content: "\e800";
+}
+
+.menu-act .sub-menu{
+    display: block;
+}
+
+.sub-menu1, .sub-menu2, .sub-menu3{
+   left: 0;
+}
+.sub-menu4, .sub-menu5, .sub-menu6{
+    right: 0;
+}
+
 
 /*visual*/
 .visual {
