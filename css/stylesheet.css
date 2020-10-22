@@ -203,6 +203,7 @@ a{
         color: rgba(0,0,0,0);
         transform: translate(0,0);
     }    
+
     100%{
         font-size:: 24px;
         color: rgba(0,0,0,1);
@@ -210,20 +211,59 @@ a{
     }
 }
 
+@keyframes bgAni{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 .visual {
-    background: lime;
     height: 120px; /*원래 규격을 fix하는 것은 좋지 않지만 변경 계획이 없다면 괜찮음*/
     position: relative;
 }
 
+.visual::before, .visual::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    /*
+    animation-name: bgAni;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite; /*ani 횟수 조정 : 무한
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    */
+    animation: bgAni 2000ms alternate infinite ease-in-out; /**/
+}
+.visual::before{ 
+    background-image: url(./images/ani_flower_01.png),
+        url(./images/ani_flower_02.png);
+    background-position: 0 -10px, 670px 0; /* 이미지 여백으로 잘리는 현상때문에 x,y축 조절*/
+}
+
+.visual::after{ 
+    background-image: url(./images/ani_flower_03.png),
+        url(./images/ani_flower_04.png);
+    background-position: 300px 0, 800px 0; /* 이미지 여백으로 잘리는 현상때문에 x,y축 조절*/
+    animation-delay: 1000ms;
+}
+
 .visual-text{
+    width: 300px;
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     animation-name: textAni;
     animation-duration: 3000ms;
     animation-fill-mode: forwards;
-    background-color: orange;
-    /*position: absoulte;*/
+    /*position: absoulte; 위치조정을 위한 것 ->애니메이션으로 대체함*/ 
 }
 
 
