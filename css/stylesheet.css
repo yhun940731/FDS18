@@ -196,12 +196,36 @@ a{
 }
 
 
-/*visual*/
+/*text 및 배경 애니메이션 -visual*/
+@keyframes textAni{
+    0%{ /*from과 to 속성으로도 설정할 수 있음.*/
+        font-size: 12px;
+        color: rgba(0,0,0,0);
+        transform: translate(0,0);
+    }    
+    100%{
+        font-size:: 24px;
+        color: rgba(0,0,0,1);
+        transform: translate(400px,75px);
+    }
+}
+
 .visual {
     background: lime;
-    height: 120px;
-    /*원래 규격을 fix하는 것은 좋지 않지만 변경 계획이 없다면 괜찮음*/
+    height: 120px; /*원래 규격을 fix하는 것은 좋지 않지만 변경 계획이 없다면 괜찮음*/
+    position: relative;
 }
+
+.visual-text{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation-name: textAni;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+    background-color: orange;
+    /*position: absoulte;*/
+}
+
 
 .main {
     background: skyblue;
