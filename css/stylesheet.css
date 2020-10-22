@@ -205,7 +205,7 @@ a{
     }    
 
     100%{
-        font-size:: 24px;
+        font-size: 24px;
         color: rgba(0,0,0,1);
         transform: translate(400px,75px);
     }
@@ -226,7 +226,8 @@ a{
     position: relative;
 }
 
-.visual::before, .visual::after{
+.visual::before,
+.visual::after{
     content: "";
     position: absolute;
     top: 0;
@@ -257,7 +258,7 @@ a{
 }
 
 .visual-text{
-    width: 300px;
+    width: 500px;
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     animation-name: textAni;
@@ -297,9 +298,13 @@ a{
 }
 
 .group1 {
-    background: blueviolet;
+    background: gray;
     width: 250px;
 
+}
+
+.logo{
+    display: block;
 }
 
 .group2 {
