@@ -5,13 +5,15 @@
 @import url(./fontello.css);
 
 /* 숨김 제목 및 숨김 콘텐츠 */
-.a11y-hidden{
+.a11y-hidden, legend{
     position: absolute;
     width: 1px;
     height: 1px;
     margin:0;
     overflow:hidden;
-    clip-path: polygon(0 0, 0 0, 0 0) /*x, y, z*/
+    clip-path: polygon(0 0, 0 0, 0 0); /*x, y, z*/
+    clip: rect(0, 0, 0, 0);
+    clip: rect(0 0 0 0);
 }
 
 /*body 안에 있는 모든 요소 박스사이징 초기화*/
@@ -73,9 +75,11 @@ a{
     padding: 0 30px;
 }
 
+
 /*Logo*/
 .logo{
     position: absolute;
+    display: block;
     top: 50px;
     left: 65px;
     margin: 0;
@@ -213,11 +217,11 @@ a{
 
 @keyframes bgAni{
     0%{
-        opacity: 0;
+        opacity: 1;
     }
 
     100%{
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -292,20 +296,70 @@ a{
     clear: both;
 } */
 
+/* float 정렬을 위한 클래스
+.clearfix{
+    clear: both;
+}
+*/
+
+
 .group {
     float: left;
     margin: 0 15px;
 }
 
 .group1 {
-    background: gray;
+    background: blueviolet;
     width: 250px;
-
 }
 
-.logo{
-    display: block;
+.login{
+    background: linear-gradient(
+        to bottom,
+        #efa22f 0%,
+        #ed702d 35%, 
+        #ed702d 70%,
+        #efa22f 100%
+    );
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0 gray;
+    padding: 15px;
 }
+
+.login-heading{
+    margin:0;
+    color: #ff0;
+    font-size: 1.6 rem;
+    padding-left: 10px;
+}
+
+.login-form{
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.user-email{
+   
+    margin: 0;
+}
+.user-pw{
+    margin: 0;
+}
+}
+.btn-login{
+    position: absolute;
+}
+.login-member{
+    
+}
+.signup{
+    float: left;
+}
+.find-pw{
+}
+
 
 .group2 {
     background: tomato;
@@ -316,12 +370,6 @@ a{
     background: greenyellow;
     width: 180px;
 }
-
-/* float 정렬을 위한 클래스
-.clearfix{
-    clear: both;
-}
-*/
 
 .slogan {
     background: orange;
