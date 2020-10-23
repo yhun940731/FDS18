@@ -468,12 +468,32 @@ a {
     margin-top: 10px;
 }
 
-.validation-list a:hover{
+.validation-list a:hover, .validation-list a:focus{
     color:red;
 }
 
+.term{
+    margin: 25px 0 0 0;
+    padding-left: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: linear-gradient(to top, #eee, #ccc);
+}
+
+.term h2{
+    font-size: 1.6rem;
+}
+
+dd img{
+    float: left;
+}
+
+.term dt{
+    color: blue;
+}
+
 .slogan {
-    background: orange;
+    background: rgb(8, 8, 8);
 }
 
 .footer {
