@@ -422,59 +422,57 @@ a {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    letter-spacing: -1px; /*자간 조절*/
+    letter-spacing: -1px;
+    /*자간 조절*/
 }
-.login-member li{
+
+.login-member li {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-.login-member .icon-right-open{
+.login-member .icon-right-open {
     color: #ed702d;
 }
 
-.login-member a{
+.login-member a {
     display: block;
     padding: 8px 0;
 }
 
-.signup {
+.signup {}
 
-}
-
-.find-pw {
-
-}
+.find-pw {}
 
 /*유효성 검사 배너*/
-.validation{
+.validation {
     margin: 25px 0 0 0;
 }
 
-.validation-list{
+.validation-list {
     margin: 25px 0 0 0;
     list-style-type: none;
     padding-left: 0;
 }
 
-.validation-list a{
+.validation-list a {
     display: block;
     border-radius: 20px;
     border: 1px solid #aaa;
-    background: url(./images/validation_icon.png) no-repeat 25px 50% /
-    20px 20px, linear-gradient(to bottom, #eee, #ccc);
+    background: url(./images/validation_icon.png) no-repeat 25px 50% / 20px 20px, linear-gradient(to bottom, #eee, #ccc);
     padding: 8px 10px 8px 50px;
     margin-top: 10px;
 }
 
-.validation-list a:hover, .validation-list a:focus{
-    color:red;
+.validation-list a:hover,
+.validation-list a:focus {
+    color: red;
 }
 
 /*웹 관련 용어*/
 
-.term{
+.term {
     border: 1px solid #aaa;
     background: linear-gradient(to top, #eee, #ccc);
     padding: 15px 20px;
@@ -482,57 +480,101 @@ a {
     border-radius: 5px;
 }
 
-.term-heading{
+.term-heading {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-.term-list{
+.term-list {
     margin: 15px 0 0 0;
 }
 
-.term-list > div{
+.term-list>div {
     overflow: hidden;
 }
 
-.term-list > div:nth-child(even){
-    margin-top:15px;
+.term-list>div:nth-child(even) {
+    margin-top: 15px;
 }
 
-.term-list-subject{
+.term-list-subject {
     color: #296897;
 }
 
-.term-list-thumbnail{
+.term-list-thumbnail {
     float: left;
 }
 
-.term-list-thumbnail img{ /*block 상자 안에 inline 상자라서 밑단에 생기는 gap 때문에*/
+.term-list-thumbnail img {
+    /*block 상자 안에 inline 상자라서 밑단에 생기는 gap 때문에*/
     display: block;
 }
 
 .term-list-subject,
-.term-list-brief{
+.term-list-brief {
     float: right;
     width: 145px;
 }
 
-.term-list dd{
-    margin-left:0;
+.term-list dd {
+    margin-left: 0;
 }
 
-.even .term-list-subject,
-.even .term-list-brief{
+.term-list div:nth-child(even) .term-list-subject,
+.term-list div:nth-child(even) .term-list-brief {
     float: left;
 }
-.even .term-list-thumbnail{
+
+.term-list div:nth-child(even) .term-list-thumbnail {
     float: right;
 }
-.term-list-brief{
+
+.term-list-brief {
     margin-top: 5px;
     line-height: 1.5;
+}
+
+/*검색*/
+.search-form {
+    background: #ccc linear-gradient(#ccc, #eee);
+    /*앞에 ccc를 또 붙이는 이유는 호환성 때문이다.
+    linear가 안될때를 상정해서 고정 배경색을 만들어준다.*/
+    border: 1px solid #aaa;
+    border-bottom-color: transparent;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 10px;
+}
+
+.search-form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.search-form-container{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-form [name="search"] {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 0.5em;
+    height: 22px;
+    width: 190px;
+}
+
+.btn-search {
+    background-color: #333;
+    border: 1px solid #aaa;
+    color: #fff;
+    border-radius: 3px;
+    height: 22px;
+    padding: 0 1opx;
 }
 
 /*슬로건*/

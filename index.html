@@ -201,7 +201,7 @@
                             W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
                         </dd>
                     </div>
-                    
+
                     <div>
                         <dt class="term-list-subject">웹 표준 이란?</dt>
                         <dd class="term-list-thumbnail">
@@ -216,9 +216,16 @@
         </div>
 
         <div class="group group2">
-            <form class="" action="#" method="POST">
-                <input type="search">
-                <button class="" type="submit">검색</button>
+            <h2 class="a11y-hidden">검색</h2>
+            <form class="search-form" action="https://formspree.io/seulbinim@gmail.com" method="POST">
+                <fieldset>
+                    <legend>검색폼</legend>
+                    <div class="search-form-container">
+                        <label for="search"><span class="icon-search"></span>자료검색</label>
+                        <input type="search" id="search" name="search" required placeholder="검색어를 입력하세요.">
+                        <button class="btn-search" type="submit">검색</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
 
