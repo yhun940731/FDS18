@@ -472,28 +472,72 @@ a {
     color:red;
 }
 
+/*웹 관련 용어*/
+
 .term{
-    margin: 25px 0 0 0;
-    padding-left: 15px;
     border: 1px solid #aaa;
-    border-radius: 5px;
     background: linear-gradient(to top, #eee, #ccc);
+    padding: 15px 20px;
+    margin: 15px 0 0 0;
+    border-radius: 5px;
 }
 
-.term h2{
+.term-heading{
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 1.6rem;
+    font-weight: 700;
 }
 
-dd img{
+.term-list{
+    margin: 15px 0 0 0;
+}
+
+.term-list > div{
+    overflow: hidden;
+}
+
+.term-list > div:nth-child(even){
+    margin-top:15px;
+}
+
+.term-list-subject{
+    color: #296897;
+}
+
+.term-list-thumbnail{
     float: left;
 }
 
-.term dt{
-    color: blue;
+.term-list-thumbnail img{ /*block 상자 안에 inline 상자라서 밑단에 생기는 gap 때문에*/
+    display: block;
 }
 
+.term-list-subject,
+.term-list-brief{
+    float: right;
+    width: 145px;
+}
+
+.term-list dd{
+    margin-left:0;
+}
+
+.even .term-list-subject,
+.even .term-list-brief{
+    float: left;
+}
+.even .term-list-thumbnail{
+    float: right;
+}
+.term-list-brief{
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+/*슬로건*/
 .slogan {
-    background: rgb(8, 8, 8);
+    background: lime;
 }
 
 .footer {
