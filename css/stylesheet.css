@@ -573,14 +573,12 @@ a {
     color: #fff;
     border-radius: 3px;
     height: 22px;
-    padding: 0 1opx;
+    padding: 0 10px;
 }
 
 /*보드*/
 .board {
-    background: lime;
     position: relative;
-    height: 200px;
     margin-top: 20px;
 }
 
@@ -599,8 +597,18 @@ a {
 }
 
 .tab {
-    float: left;
     margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.notice-heading{
+    left:0;
+}
+
+.pds-heading{
+    left: 83px;
 }
 
 .tab a {
@@ -611,7 +619,11 @@ a {
     color: #999;
     font-size: 1.4rem;
     font-weight: 400;
-    padding: 5px 10px;
+    padding: 5px 15px;
+}
+
+.is-active .tab{
+    z-index: 5;
 }
 
 .is-active .tab a {
@@ -627,9 +639,8 @@ a {
     padding-left: 0;
     margin: 0;
     background: #eee;
-    position: absolute;
-    left: 0;
-    top: 45px;
+    padding-top: 45px;
+    min-height: 170px;
 }
 
 .notice-list li,
