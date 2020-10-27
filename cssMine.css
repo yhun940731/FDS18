@@ -2,16 +2,56 @@
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
 
-.a11y-hidden{
-
+html{
+    font-size: 10px;
 }
 
-.skip-na{
-    display:noen;
+.a11y-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+}
+
+body *,
+body *::before,
+body *::after{
+    box-sizing: border-box;
+}
+
+/*링크 스타일*/
+a {
+    color: inherit;
+    text-decoration: none;
+    /*a태그 밑줄 없애기*/
+}
+
+body {
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    /*'Spoqa Han Sans폰트 오류 시 'Sans-serif' 글꼴군으로 대체*/
+    font-size: 1.4rem;
+    color: #181818;
+    background: #ccc;
+}
+
+.header,
+.visual,
+.main,
+.slogan {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.skip-nav{
+    display:none;
 }
 
 .header{
-    border-radius: 15px 15px 0 0;
+    border-radius: 0 0 15px 15px;
     background-color: #fff;
     padding: 0 30px;
     position: relative;
@@ -22,7 +62,12 @@
 }
 
 .member{
+    list-style-type: none;
+    text-align: right;
+}
 
+.member li{
+    display: inline-block;
 }
 
 .divider{
@@ -30,23 +75,31 @@
 }
 
 .navigation{
-    background-color: orange;
+    padding-bottom: 35px;
 }
 
 .menu{
-    
+    background: linear-gradient(to bottom,
+    #efa22f 0%,
+    #ed702d 35%,
+    #ed702d 70%,
+    #efa22f 100%);
+    list-style: none;
+    height: 47px;
 }
 
 .menu-item{
-
+    position: relative;
+    float: left;
 }
 
 .menu-button{
 
 }
 
-.sub-menu{
 
+.sub-menu{
+    list-style-type: none;
 }
 
 .sub-menu1{

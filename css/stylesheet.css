@@ -113,18 +113,18 @@ a {
 
 .menu {
     background: linear-gradient(to bottom,
-            #efa22f 0%,
-            #ed702d 35%,
-            #ed702d 70%,
-            #efa22f 100%);
-    border-top: 2px solid currentColor;
+    #efa22f 0%,
+    #ed702d 35%,
+    #ed702d 70%,
+    #efa22f 100%);
     /*currentColor: 현재 글자 칼라*/
-    margin: 10px 0 0 0;
+    border-top: 2px solid currentColor;
     /*콘텐츠 간의 간격을 위한*/
-    padding-left: 0;
+    margin: 10px 0 0 0;
     /*여백 없애기*/
-    list-style: none;
+    padding-left: 0;
     /*리스트 앞 도형 없애기*/
+    list-style: none;
     height: 47px;
     border-radius: 0 0 5px 5px;
     padding-left: 225px;
@@ -161,12 +161,12 @@ a {
 }
 
 .sub-menu {
-    margin: 0;
     /*콘텐츠 간의 간격을 위한*/
-    padding-left: 0;
+    margin: 0;
     /*여백 없애기*/
-    list-style: none;
+    padding-left: 0;
     /*리스트 앞 도형 없애기*/
+    list-style: none;
     display: none;
     position: absolute;
     top: 47px;
@@ -265,7 +265,6 @@ a {
     animation-timing-function: ease-in-out;
     */
     animation: bgAni 2000ms alternate infinite ease-in-out;
-    /**/
 }
 
 .visual::before {
@@ -290,7 +289,7 @@ a {
     animation-name: textAni;
     animation-duration: 3000ms;
     animation-fill-mode: forwards;
-    /*position: absoulte; 위치조정을 위한 것 ->애니메이션으로 대체함*/
+    /*position: absoulte; 위치조정을 위한 것->애니메이션으로 대체함*/
 }
 
 
