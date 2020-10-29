@@ -24,13 +24,6 @@ html {
     font-size: 10px;
 }
 
-/*링크 스타일*/
-a {
-    color: inherit;
-    text-decoration: none;
-    /*a태그 밑줄 없애기*/
-}
-
 body {
     font-family: 'Spoqa Han Sans', 'Sans-serif';
     /*'Spoqa Han Sans폰트 오류 시 'Sans-serif' 글꼴군으로 대체*/
@@ -39,6 +32,7 @@ body {
     background: #ccc;
 }
 
+/*링크 스타일*/
 a {
     color: inherit;
     text-decoration: none;
@@ -59,10 +53,10 @@ a {
 
 
 .header {
-    border-radius: 0 0 15px 15px;
-    background-color: #fff;
-    padding: 0 30px;
     position: relative;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px;
 }
 
 .logo {
@@ -352,4 +346,63 @@ a {
 .login-member a{
     display: block;
     padding: 8px 0;
+}
+
+.validation{
+    margin: 25px 0 0 0;
+}
+
+.validation-list{
+    margin: 25px 0 0 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.validation-list a{
+    display: block;
+    border-radius: 20px;
+    border: 1px solid #aaa;
+    background: url("./images/validation_icon.png") no-repeat 
+    25px 50% / 20px 20px, linear-gradient(to bottom, #eee, #ccc);
+    padding: 8px 10px 8px 50px;
+    margin-top: 10px;
+}
+
+.validation-list a:hover
+.validation-list a:active{
+    color: red;
+}
+
+.term{
+    border: 1px solid #aaa;
+    background: linear-gradient(to top, #eee, #ccc);
+    padding: 15px 20px;
+    margin: 15px 0 0 0;
+    border-radius: 5px;
+}
+
+.term-heading{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.term-list{
+    
+}
+
+.term-list-subject{
+    color: #296897;
+}
+
+.term-list dd{
+    margin:0;
+}
+
+.term-list-thumbnail{
+    float: left;
+    display: block;
+}
+
+.term-list-brief{
+
 }

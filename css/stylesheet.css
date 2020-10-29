@@ -52,7 +52,6 @@ a {
     /*a태그 밑줄 없애기*/
 }
 
-
 /*skip nav*/
 .skip-nav {
     display: none;
@@ -459,7 +458,8 @@ a {
     display: block;
     border-radius: 20px;
     border: 1px solid #aaa;
-    background: url(./images/validation_icon.png) no-repeat 25px 50% / 20px 20px, linear-gradient(to bottom, #eee, #ccc);
+    background: url(./images/validation_icon.png) no-repeat 
+    25px 50% / 20px 20px, linear-gradient(to bottom, #eee, #ccc);
     padding: 8px 10px 8px 50px;
     margin-top: 10px;
 }
@@ -741,7 +741,7 @@ a {
     text-align: center;
 }
 
-.news-article-thumbnail img{
+ .news-article-thumbnail img{
     box-shadow: 0 15px 15px 0 #aaa;
 }
 
@@ -750,14 +750,14 @@ a {
     top: -8px;
     right: -8px;
     padding: 8px;
-}
+} */
 
 .news-more::before{
     color: hsla(110, 50%, 30%, 1);
 }
 
 
-/*grid 사용 안 할 시!
+/* grid 사용 안 할 시!
 .news-article{
     padding: 0 0 0 130px;
 }
@@ -767,7 +767,7 @@ a {
     margin: 0;
     top: 50px;
     left: 0;
-}*/
+} */
 
 
 /*슬로건*/
