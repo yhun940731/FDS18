@@ -34,7 +34,7 @@ body {
     /*'Spoqa Han Sans폰트 오류 시 'Sans-serif' 글꼴군으로 대체*/
     font-size: 1.4rem;
     color: #181818;
-    background: #ccc linear-gradient(#ccc 0%, #eee 35%, #fff 60%, #fff 100%);
+    background: url(./images/bg_flower.png) no-repeat 50% 0, #ccc linear-gradient(#ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 
     /*
     flex를 활용한 콘텐츠 가운데 정렬
@@ -53,8 +53,23 @@ a {
 }
 
 /*skip nav*/
-.skip-nav {
-    display: none;
+.skip-nav a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.skip-nav a:focus{
+    height: auto;
+    padding: 10px 0;
 }
 
 /*Layout*/
@@ -62,7 +77,8 @@ a {
 .header,
 .visual,
 .main,
-.slogan {
+.slogan,
+.footer-inner{
     width: 940px;
     margin: 0 auto;
 }
@@ -307,6 +323,7 @@ a {
     하지만 clearfix가 더 좋다.*/
     overflow: hidden;
     min-height: 450px;
+    border-radius: 15px 15px 0 0;
 }
 
 /* 정렬을 위한 main의 class
@@ -989,4 +1006,54 @@ a {
 .footer {
     background: #ccc linear-gradient(#ccc 0%, #eee 35%, #fff 60%, #fff 100%);
     width: 100%;
+}
+
+.footer-inner{
+    padding: 15px 100px 14px 180px;
+    position: relative;
+}
+
+.footer-logo{
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+.guide-list{
+    margin: 0;
+    padding-left: 2px 0 0 38px;
+    list-style: none;
+    background: #7b8385;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.guide-list li{
+    float: left;
+    margin: 0 5px;
+}
+
+.guide-list a{
+    display: block;
+    padding: 8px 10px;
+}
+
+.address{
+    margin: 10px 0 5px;
+    font-style: normal;
+}
+
+.address span{
+    margin-right: 15px;
+}
+
+.copyright{
+    font-size: 1.4rem;
+}
+
+.badge{
+    position: absolute;
+    top: 15px;
+    right: 0px;
 }
