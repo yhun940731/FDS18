@@ -741,7 +741,7 @@ a {
     text-align: center;
 }
 
- .news-article-thumbnail img{
+.news-article-thumbnail img{
     box-shadow: 0 15px 15px 0 #aaa;
 }
 
@@ -750,7 +750,7 @@ a {
     top: -8px;
     right: -8px;
     padding: 8px;
-} */
+} 
 
 .news-more::before{
     color: hsla(110, 50%, 30%, 1);
@@ -784,7 +784,8 @@ a {
 }
 
 .event-heading,
-.related-heading{
+.related-heading,
+.favorite-heading{
     font-size: 1.6rem;
     font-weight: 700;
     margin: 0;
@@ -855,6 +856,88 @@ a {
 .related-list:hover{
     height: 147px;
     padding: 10px 0;
+}
+
+/*인기사이트*/
+.favorite{
+    position: relative;
+    margin-top: 20px;;
+}
+
+.favorite-list{
+    margin:10px 0 0 0;
+    padding-left: 0;
+    counter-reset : number;
+    list-style-type:none;
+}
+
+.favorite-list li{
+    position: relative;
+    margin-top: 8px;
+    counter-increment : number; 
+    /* display: flex;
+    flex-flow: row nowrap;
+    align-items: center; */
+}
+
+.favorite-list li::before{
+    position: absolute;
+    left:0;
+    top: 50%;
+    margin-top: -9px;
+    content : counter(number);
+    color: #fff;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding:2px 5px;
+    margin-right: 5px;
+    background: #999;
+    border-radius: 2px;
+}
+
+.favorite-list a{
+    margin: 0 10px 0 20px;
+    display: block;
+    /* flex-grow: 1; */
+}
+
+.up,
+.down,
+.stop{
+    position: absolute;
+    right:0;
+    top: 50%;
+    margin-top: -5px;
+    display: inline-block;
+    font-size: normal;
+    width: 9px;
+    height: 0;
+    padding-top: 11px;
+    overflow: hidden;
+    background-image: url(./images/rank.png);
+    background-repeat: no-repeat;
+}
+
+.up{
+    background-position: 0 0;
+}
+
+.down{
+    background-position: 0 100%;
+}
+
+.stop{
+    background-position: 0 50%;
+}
+
+.favorite-more{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 8px;
+}
+.favorite-more::before{
+    color: hsla(110, 50%, 30%, 1);
 }
 
 /*슬로건*/
